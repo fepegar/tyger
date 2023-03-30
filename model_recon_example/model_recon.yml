@@ -1,0 +1,20 @@
+job:
+  codespec:
+    image: eminence.azurecr.io/python_recon:latest
+    buffers:
+      inputs:
+        - "input"
+      outputs:
+        - "output"
+    command: []
+    args:
+      - "-i"
+      - "$(INPUT_PIPE)"
+      - "-o"
+      - "$(OUTPUT_PIPE)"
+      - "--pipeline"
+      - "model"
+      - "--model"
+      - "brain"
+    resources:
+      gpu: "1"

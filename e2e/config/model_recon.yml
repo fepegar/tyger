@@ -1,0 +1,18 @@
+job:
+  codespec:
+    image: eminence.azurecr.io/python_recon:current
+    buffers:
+      inputs:
+        - input
+      outputs:
+        - output
+    args:
+      - "-i"
+      - "$(INPUT_PIPE)"
+      - "-o"
+      - "$(OUTPUT_PIPE)"
+      - "p"
+      - "model"
+    resources:
+      requests:
+        gpu: 1
