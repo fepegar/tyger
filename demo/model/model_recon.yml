@@ -6,7 +6,6 @@ job:
         - "input"
       outputs:
         - "output"
-    command: []
     args:
       - "-i"
       - "$(INPUT_PIPE)"
@@ -17,4 +16,4 @@ job:
       - "--model"
       - "brain"
     resources:
-      gpu: "1"
+      gpu: 1
